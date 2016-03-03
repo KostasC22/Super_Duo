@@ -81,6 +81,8 @@ public class scoresAdapter extends CursorAdapter {
                             + mHolder.score.getText() + " " + mHolder.away_name.getText() + " "));
                 }
             });
+            share_button.setContentDescription(context.getString(R.string.a11y_score, mHolder.home_name.getText() + " "
+                    + mHolder.score.getText() + " " + mHolder.away_name.getText() + " "));
         } else {
             container.removeAllViews();
         }
