@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/widget_bg_normal"
-    android:layout_gravity="center" >
+    android:layout_gravity="center">
 
 
     <TextView
@@ -15,6 +15,7 @@
         android:visibility="gone"
         android:textColor="#ffffff"
         android:textDirection="rtl"
+        android:contentDescription="@string/empty_view_text"
         android:text="@string/empty_view_text"
         android:textSize="20sp" />
 

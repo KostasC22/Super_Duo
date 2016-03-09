@@ -88,6 +88,7 @@ class WidgetRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory 
         return mCursor.getCount();
     }
 
+    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
     @Override
     public RemoteViews getViewAt(int position) {
         final RemoteViews remoteView = new RemoteViews(mContext.getPackageName(), R.layout.widget_scores_list_item);
@@ -115,9 +116,13 @@ class WidgetRemoteViewsFactory implements RemoteViewsService.RemoteViewsFactory 
         Log.i("gva",""+iconAway);
 
         remoteView.setTextViewText(R.id.home_name, home);
+        remoteView.setContentDescription(R.id.home_name, mContext.getString(R.string.a11y_home_name, home));
         remoteView.setTextViewText(R.id.away_name, away);
+        remoteView.setContentDescription(R.id.away_name, mContext.getString(R.string.a11y_away_name, away));
         remoteView.setTextViewText(R.id.data_textview, matchTime);
+        remoteView.setContentDescription(R.id.data_textview, mContext.getString(R.string.a11y_away_name, matchTime));
         remoteView.setTextViewText(R.id.score_textview, score);
+        remoteView.setContentDescription(R.id.score_textview, score);
         remoteView.setImageViewResource(R.id.home_crest, iconHome);
         remoteView.setImageViewResource(R.id.away_crest, iconAway);
 

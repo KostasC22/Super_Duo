@@ -14,6 +14,7 @@
         android:gravity="center"
         android:visibility="gone"
         android:textColor="#ffffff"
+        android:contentDescription="@string/empty_view_text"
         android:text="@string/empty_view_text"
         android:textSize="20sp" />
 

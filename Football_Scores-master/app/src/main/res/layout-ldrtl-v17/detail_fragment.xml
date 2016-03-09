@@ -11,6 +11,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_weight="1"
+            android:contentDescription="@string/cd_league"
             android:text="@string/test_text"
             android:textColor="@android:color/black"
             android:textSize="@dimen/League"
@@ -23,6 +24,7 @@
             android:layout_weight="1"
             android:text="@string/test_text"
             android:textSize="@dimen/League"
+            android:contentDescription="@string/cd_matchday"
             android:textColor="@android:color/black"
             android:textDirection="rtl"
             android:id="@+id/matchday_textview"/>
@@ -38,6 +40,7 @@
             android:gravity="center"
             android:text="@string/share_text"
             android:id="@+id/share_button"
+            android:contentDescription="@string/cd_share_button"
             android:textDirection="rtl"
             android:drawableStart="@android:drawable/ic_menu_share"
             android:paddingStart="120dp"

@@ -42,10 +42,16 @@
     <string name="a11y_matchtime">Matchtime: <xliff:g id="condition">%1$s</xliff:g></string>
     <string name="a11y_score">Score: <xliff:g id="condition">%1$s</xliff:g></string>
     <string name="a11y_share_button">Share: <xliff:g id="condition">%1$s</xliff:g></string>
+    <string name="cd_league">League</string>
+    <string name="cd_matchday">Match Day</string>
+    <string name="cd_city">City</string>
+    <string name="cd_about_app">About</string>
+    <string name="cd_share_button">Share butto</string>
 
     <!-- widget -->
     <string name="widget_text">xda-developers</string>
     <string name="empty_view_text">No matchs found...</string>
+
 
 
 </resources>
