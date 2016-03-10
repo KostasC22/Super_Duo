@@ -119,7 +119,7 @@ public class BookDetail extends Fragment implements LoaderManager.LoaderCallback
         ((TextView) rootView.findViewById(R.id.fullBookDesc)).setText(desc);
 
         String authors = data.getString(data.getColumnIndex(AlexandriaContract.AuthorEntry.AUTHOR));
-        if(desc == null){
+        if(authors == null){
             authors = "Not found,Not found";
         }
         String[] authorsArr = authors.split(",");

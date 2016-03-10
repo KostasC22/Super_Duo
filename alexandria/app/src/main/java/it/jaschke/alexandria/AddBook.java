@@ -199,12 +199,21 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         }
 
         String bookTitle = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.TITLE));
+        if(bookTitle == null){
+            bookTitle = "Not found";
+        }
         ((TextView) rootView.findViewById(R.id.bookTitle)).setText(bookTitle);
 
         String bookSubTitle = data.getString(data.getColumnIndex(AlexandriaContract.BookEntry.SUBTITLE));
+        if(bookSubTitle == null){
+            bookSubTitle = "Not found";
+        }
         ((TextView) rootView.findViewById(R.id.bookSubTitle)).setText(bookSubTitle);
 
         String authors = data.getString(data.getColumnIndex(AlexandriaContract.AuthorEntry.AUTHOR));
+        if(authors == null){
+            authors = "Not found,Not found";
+        }
         String[] authorsArr = authors.split(",");
         ((TextView) rootView.findViewById(R.id.authors)).setLines(authorsArr.length);
         ((TextView) rootView.findViewById(R.id.authors)).setText(authors.replace(",", "\n"));
@@ -215,6 +224,9 @@ public class AddBook extends Fragment implements LoaderManager.LoaderCallbacks<C
         }
 
         String categories = data.getString(data.getColumnIndex(AlexandriaContract.CategoryEntry.CATEGORY));
+        if(categories == null){
+            categories = "Not found";
+        }
         ((TextView) rootView.findViewById(R.id.categories)).setText(categories);
 
         rootView.findViewById(R.id.save_button).setVisibility(View.VISIBLE);
